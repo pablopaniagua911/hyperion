@@ -76,6 +76,9 @@ cv2.imshow("Original", imutils.resize(orig, height = 650))
 cv2.imshow("Scanned", imutils.resize(warped, height = 650))
 cv2.waitKey(0)
 
+
+
 ##Transform image to text
+image = warped
 pytesseract.pytesseract.tesseract_cmd = '/usr/local/bin/tesseract'
 txt = pytesseract.image_to_string(image.convert("RGB"), lang='eng')
